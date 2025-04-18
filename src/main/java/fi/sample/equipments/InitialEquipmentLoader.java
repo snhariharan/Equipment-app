@@ -29,14 +29,14 @@ public class InitialEquipmentLoader implements CommandLineRunner {
         service.save(equipment);
 
         Equipment equipment2 = new Equipment();
-        equipment.setName("Lift2");
-        equipment.setLocation("Espoo");
-        equipment.setModel("Kone");
-        equipment.setManufacturer("Kone");
-        equipment.setType("Lift");
-        equipment.setSerialNumber("123456");
-        equipment.setStatus("Active");
-        equipment.setDescription("Lift in good condition");
+        equipment2.setName("Lift2");
+        equipment2.setLocation("Espoo");
+        equipment2.setModel("Kone");
+        equipment2.setManufacturer("Kone");
+        equipment2.setType("Lift");
+        equipment2.setSerialNumber("123456");
+        equipment2.setStatus("Active");
+        equipment2.setDescription("Lift in good condition");
         service.save(equipment2);
     }
 }

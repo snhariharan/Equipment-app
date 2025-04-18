@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import CreateEquipmentForm from './components/CreateEquipmentForm'
+import NavBar from "./components/NavBar";
+import EquipmentList from "./components/EquipmentList";
+import Equipments from "./components/Equipments";
+import { EquipmentListProvider } from "./context/EquipmentContext";
+import EquipmentDetail from "./components/EquipmentDetail";
+import UpdateEquipmentForm from './components/UpdateEquipmentForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <EquipmentListProvider>
+          <div className="container">
+            <NavBar/>
+            <hr/>
+            <Routes>
+              <Route path="/new" element={<CreateEquipmentForm/>}/>
+              <Route path="/" element={<Equipments/>}>
+                <Route index element={<EquipmentList/>}/>
+                <Route path=":id" element={<EquipmentDetail/>}/>
+                <Route path=":id/edit" element={<UpdateEquipmentForm/>}/>
+              </Route>
+            </Routes>
+            <div className="d-flex flex-row align-items-center footer bg-dark bg-opacity-25 shadow-lg mt-md-5">
+              <p className="m-auto">s.n.hariharan@gmail.com | 2025</p>
+            </div>
+          </div>
+        </EquipmentListProvider>
+      </Router>
     </div>
   );
 }
