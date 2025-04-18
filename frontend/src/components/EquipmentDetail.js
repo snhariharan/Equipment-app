@@ -65,7 +65,7 @@ export default function EquipmentDetail () {
         </tr>
         <tr>
           <th scope="row">Serial Number</th>
-          <td>{equipment.serial}</td>
+          <td>{equipment.serialNumber}</td>
         </tr>
         <tr>
           <th scope="row">Location</th>

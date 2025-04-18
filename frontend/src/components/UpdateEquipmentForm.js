@@ -50,8 +50,8 @@ export default function UpdateEquipmentForm() {
       case "model":
         updateEquipment({...equipment, model: value});
         break;
-      case "serial":
-        updateEquipment({...equipment, serial: value});
+      case "serialNumber":
+        updateEquipment({...equipment, serialNumber: value});
         break;
       case "location":
         updateEquipment({...equipment, location: value});
@@ -84,38 +84,38 @@ export default function UpdateEquipmentForm() {
       </nav>
       <form>
         <div className="mb-3 mt-5">
-          <label htmlFor="name" className="form-label">Name</label>
+          <label htmlFor="name" className="fw-bold form-label">Name</label>
           <input onChange={handleChange} value={equipment.name} type="text" className="form-control" id="name" aria-describedby="nameHelp" />
           <div id="nameHelp" className="form-text">Input the equipment name here.</div>
         </div>
         <div className="mb-3">
           <div className="row">
             <div className="col-6">
-              <label htmlFor="type" className="form-label">Price</label>
+              <label htmlFor="type" className="fw-bold form-label">Price</label>
               <input onChange={handleChange} value={equipment.type} type="string" className="form-control" id="type" />
             </div>
             <div className="col-6">
-              <label htmlFor="manufacturer" className="form-label">Quantity</label>
+              <label htmlFor="manufacturer" className="fw-bold form-label">Quantity</label>
               <input onChange={handleChange} value={equipment.manufacturer} type="string" className="form-control" id="manufacturer" />
             </div>
             <div className="col-6">
-              <label htmlFor="model" className="form-label">Model</label>
+              <label htmlFor="model" className="fw-bold form-label">Model</label>
               <input onChange={handleChange} value={equipment.model} type="string" className="form-control" id="model" />
             </div>
             <div className="col-6">
-              <label htmlFor="serial" className="form-label">Serial Number</label>
-              <input onChange={handleChange} value={equipment.serial} type="string" className="form-control" id="serial" />
+              <label htmlFor="serialNumber" className="fw-bold form-label">Serial Number</label>
+              <input onChange={handleChange} value={equipment.serialNumber} type="string" className="form-control" id="serialNumber" />
             </div>
             <div className="col-6">
-              <label htmlFor="location" className="form-label">Location</label>
+              <label htmlFor="location" className="fw-bold form-label">Location</label>
               <input onChange={handleChange} value={equipment.location} type="string" className="form-control" id="location" />
             </div>
             <div className="col-6">
-              <label htmlFor="status" className="form-label">Status</label>
+              <label htmlFor="status" className="fw-bold form-label">Status</label>
               <input onChange={handleChange} value={equipment.status} type="string" className="form-control" id="status" />
             </div>
             <div className="col-6">
-              <label htmlFor="description" className="form-label">Description</label>
+              <label htmlFor="description" className="fw-bold form-label">Description</label>
               <input onChange={handleChange} value={equipment.description} type="string" className="form-control" id="description" />
             </div>
           </div>

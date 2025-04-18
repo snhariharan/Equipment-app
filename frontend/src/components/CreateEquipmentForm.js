@@ -45,7 +45,7 @@ export default function CreateEquipmentForm() {
   return(
     <form>
       <div className="mb-3 mt-5">
-        <label htmlFor="name" className="form-label">Name</label>
+        <label htmlFor="name" className="fw-bold form-label">Name</label>
         <input ref={nameRef} type="text" className="form-control" id="name" aria-describedby="nameHelp" />
         <div id="nameHelp" className="form-text">Input the equipment name here.</div>
       </div>
@@ -53,31 +53,31 @@ export default function CreateEquipmentForm() {
 
         <div className="row">
           <div className="col-6">
-            <label htmlFor="type" className="form-label">Type</label>
+            <label htmlFor="type" className="fw-bold form-label">Type</label>
             <input ref={typeRef} type="string" className="form-control" id="type" />
           </div>
           <div className="col-6">
-            <label htmlFor="manufacturer" className="form-label">Manufacturer</label>
+            <label htmlFor="manufacturer" className="fw-bold form-label">Manufacturer</label>
             <input ref={manufacturerRef} type="string" className="form-control" id="manufacturer" />
           </div>
           <div className="col-6">
-            <label htmlFor="model" className="form-label">Model</label>
+            <label htmlFor="model" className="fw-bold form-label">Model</label>
             <input ref={modelRef} type="string" className="form-control" id="model" />
           </div>
           <div className="col-6">
-            <label htmlFor="serial" className="form-label">Serial Number</label>
-            <input ref={serialRef} type="string" className="form-control" id="serial" />
+            <label htmlFor="serialNumber" className="fw-bold form-label">Serial Number</label>
+            <input ref={serialRef} type="string" className="form-control" id="serialNumber" />
           </div>
           <div className="col-6">
-            <label htmlFor="location" className="form-label">Location</label>
+            <label htmlFor="location" className="fw-bold form-label">Location</label>
             <input ref={locationRef} type="string" className="form-control" id="location" />
           </div>
           <div className="col-6">
-            <label htmlFor="status" className="form-label">Status</label>
+            <label htmlFor="status" className="fw-bold form-label">Status</label>
             <input ref={statusRef} type="string" className="form-control" id="status" />
           </div>
           <div className="col-6">
-            <label htmlFor="description" className="form-label">Description</label>
+            <label htmlFor="description" className="fw-bold form-label">Description</label>
             <input ref={descriptionRef} type="string" className="form-control" id="description" />
           </div>
         </div>
